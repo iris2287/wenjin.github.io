@@ -1,0 +1,31 @@
+    1  cd
+    2  ls -a
+    3  pwd
+    4  pwd
+    5  mkdir c/temp
+    6  mkdir temp
+    7  pwd
+    8  cd temp
+    9  pwd
+   10  t
+   11  touch test.c
+   12  vim test.c
+   13  ls
+   14  gcc -c test.c
+   15  mkdir demo1
+   16  ls
+   17  rmdir demo1
+   18  ls
+   19  mv webcode/demo1 temp
+   20  mv webcode temp
+   21  ls -a
+   22  mkdir =p test/test-1
+   23  mkdir demo1
+   24  ls
+   25  rmdir =p
+   26  ls
+   27  mv test.c demo1
+   28  ls
+   29  history
+   30  touch history.txt
+   31  history>history.txt

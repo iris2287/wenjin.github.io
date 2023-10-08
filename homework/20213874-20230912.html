@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux环境搭建及常见指令</title>
+    <style>
+        body{
+            background-size: cover;
+			background-attachment: fixed;	
+			background-color: #c4ebf1;
+        }
+    </style>
+</head>
+<body>
+    <div class = "head">
+        <h2>Linux环境搭建及常见指令</h2>
+    </div>
+
+    <div id = "overview">
+        <h3>简介</h3>
+        <h4>通过学习，了解了linux和unix的发展历史，如何使用XShell远程登陆到Linux，以及linux的常见指令</h4>
+    </div>
+
+    <div id = "content">
+        <h3>关于Linux的发展历史</h3>
+        <h4>1991年10月5日，赫尔辛基大学的一名研究生Linus Benedict Torvalds在一个Usenet新闻组
+            （comp.os.minix）中宣布他编制出了一种类似UNIX的小操作系统，叫Linux。新的操作系统是受到另一
+            个UNIX的小操作系统——Minix的启发，该系统是由一名叫Andrew S Tanenbaum的教师开发的。读者也
+            许猜想所发布的这个系统应该是Linux的0.01版本，实际上不是这样。真正的Linux 0.01版本并没有被发
+            布，原因是0.01版本不实用。Linus仅仅在第一个Linux的FTP站点（ftp://nic.funet.fi）上提供过这个版本
+            的的源代码。
+            Torvalds于10月5日发布的这个Linux版本被称为0.02版，它能够运行GNU Bourne Again Shell(bash)和GNU的
+            C编译程序（gcc）以及为数不多的其它语言。Torvalds绝对没有想到他设想的一种能够针对高级业余爱好者和
+            黑客们的操作系统已经产生，这就是人们所称的Linux。
+            Linux发布时的版本是0.02，后来又有0.03版，然后又跳到0.10版。因为世界各地越来越多的程序员都开始开发
+            Linux，它已经达到0.95版。这就意味着正是公布1.0版本的时间已经为期不远了。正式的1.0版本是在1994年公布的
+        </h4>
+    </div>
+
+    <div>
+        <h3>关于tar指令：打包/解包，不打开它，直接看内容</h3>
+        <h4>关于该命令的参数</h4>
+        <h4>-c ：建立一个压缩文件的参数指令(create 的意思)；</h4>
+        <h4>-x ：解开一个压缩文件的参数指令！</h4>
+        <h4>-t ：查看 tarfile 里面的文件！</h4>
+        <h4>-z ：是否同时具有 gzip 的属性？亦即是否需要用 gzip 压缩？</h4>
+        <h4>-j ：是否同时具有 bzip2 的属性？亦即是否需要用 bzip2 压缩</h4>
+        <h4>-v ：压缩的过程中显示文件！这个常用，但不建议用在背景执行过程！</h4>
+        <h4>-f ：使用档名，请留意，在 f 之后要立即接档名喔！不要再加参数！</h4>
+        <h4>-C ： 解压到指定</h4>
+    </div>
+
+    <div id = "command">
+        <h3>指令</h3>
+        <h4>1  cd</h4>
+        <h4>2  ls -a</h4>   
+        <h4>3  pwd</h4> 
+        <h4>4  pwd</h4>    
+        <h4>5  mkdir c/temp</h4>
+        <h4>6  mkdir temp</h4>   
+        <h4>7  pwd</h4>   
+        <h4>8  cd temp</h4>   
+        <h4>9  pwd</h4>    
+        <h4>10  t</h4>  
+        <h4>11  touch test.c</h4>
+        <h4>12  vim test.c</h4>
+        <h4>13  ls</h4> 
+        <h4>14  gcc -c test.c</h4>
+        <h4>15  mkdir demo1</h4>
+        <h4>16  ls</h4> 
+        <h4>17  rmdir demo1</h4>  
+        <h4>18  ls</h4>
+        <h4>19  mv webcode/demo1 temp</h4> 
+        <h4>20  mv webcode temp</h4>
+        <h4>21  ls -a</h4>
+        <h4>22  mkdir =p test/test-1</h4>
+        <h4>23  mkdir demo1</h4> 
+        <h4>24  ls</h4>   
+        <h4>25  rmdir =p</h4>  
+        <h4>26  ls</h4> 
+        <h4>27  mv test.c demo1</h4> 
+        <h4>28  ls</h4>  
+        <h4>29  history</h4>  
+        <h4>30  touch history.txt</h4>  
+        <h4>31  history>history.txt</h4>  
+        <h4>32  pwd</h4>  
+        <h4>33  cd \d</h4>  
+        <h4>34  cd /d</h4>  
+        <h4>35  ls -l</h4>
+        <h4>36  ++</h4>
+        <h4>37  cd code</h4> 
+        <h4>38  ls -l</h4>  
+        <h4>39  cd ../</h4>  
+        <h4>40  cd school</h4>  
+        <h4>41  mkdir voice</h4>  
+        <h4>42  ls</h4>  
+        <h4>43  mv *.mp3 voice</h4>  
+        <h4>44  mkdir book</h4> 
+        <h4>45  ls -l</h4>   
+        <h4>46  mv *.pdf book</h4>   
+        <h4>47  ls</h4>   
+        <h4>48  ls -l</h4>  
+        <h4>49  history > history.txt</h4>
+        <h4>50  cd school</h4>  
+        <h4>51  mv *.mp3 voice</h4>   
+        <h4>52  ls -l</h4>  
+        <h4>53  tar -zxvf videoClips</h4>  
+        <h4>54  tar -xf videoClips</h4>   
+        <h4>55  ls -l videoMP4</h4>   
+        <h4>56  rm videoClips</h4>  
+        <h4>57  history > history.</h4>  
+        </h4>
+    </div>
+
+    <div id="summary">
+        <h3>小结</h3>
+        <h4>Linux的低成本、强大的定制功能以及良好的移植性能，使得Linux在嵌入式系统方面也得到广泛应用，
+            目前Linux以广泛应用于手机、平板电脑、路由器、电视和电子游戏机等领域。
+            在移动设备上广泛使用的Android操作系统就是创建在Linux内核之上的。
+            目前，Android已经成为全球最流行的智能手机操作系统，据2015年权威部门最新统计，Android操作系统的全球市场份额已达84.6%。
+            此外，思科在网络防火墙和路由器也使用了定制的Linux，阿里云也开发了一套基于Linux的操作系统“YunOS”，可用于智能手机、
+            平板电脑和网络电视；常见的数字视频录像机、舞台灯光控制系统等都在逐渐采用定制版本的Linux来实现，而这一切均归功与Linux与开源的力量
+        </h4>
+    </div>
+</body>
+</html>
