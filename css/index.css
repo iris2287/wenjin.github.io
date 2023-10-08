@@ -1,0 +1,149 @@
+.topbar-wrapper{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background-color: #333;
+}
+
+.topbar a {
+    font-size: 12px;
+    color: #b0b0b0;
+    display: block;
+}
+
+.topbar a:hover{
+    color: #fff;
+}
+
+.title, .topbar li{
+    float: left;
+}
+
+.user-info{
+    float: right;
+    margin-left: 26px;
+}
+
+.home{
+    position: relative;
+}
+
+.home::after{
+    display: none;
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 8px solid transparent;
+    border-top: none;
+    border-bottom-color: #fff;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.home:hover .qrcode,
+.home:hover:after{
+    display: block;
+
+}
+
+.home .qrcode{
+    display: none;
+    position: absolute;
+    left: -32px;
+    width: 124px;
+    height: 148px;
+    line-height: 1;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+}
+
+.home .qrcode img{
+    width: 90px;
+    margin: 17px;
+    margin-bottom: 10px;
+}
+
+.home .qrcode span{
+    font-size: 14px;
+    color: #000;
+}
+
+
+.user-info:hover a{
+    background-color: #fff;
+    color: rgb(224, 167, 12);
+}
+
+.user-info a{
+    width: 120px;
+    background-color: #424242;
+    text-align: center;
+}
+
+.user-info i{
+    margin-right: 2px;
+}
+
+.header{
+    height: 100px;
+}
+
+.header .logo1{
+    margin-top: 0px;
+    float: left;
+    width: 55px;
+    height: 55px;
+}
+
+.header .logo2{
+    width: 550px;
+    margin-left: 120px;
+}
+
+.header .logo1 img,
+.header .logo2 img{
+    width: 90px;
+    height: 90px;
+    margin: 5px;
+    margin-bottom: 25px;
+}
+
+.header .nav-wrapper{
+    float: left;
+}
+
+.header .nav{
+    width: 850px;
+    height: 100px;
+    line-height: 100px;
+}
+
+.nav-wrapper li{
+    float: left;
+    margin: 10px;
+}
+
+.homework-menu li{
+    text-align: center;
+    width: 1300px;
+    height: 60px;
+    padding: 20px 0;
+    margin-left: 100px;
+    background-color: rgba(0, 0, 0, .6);
+    z-index: 999;
+    line-height: 1;
+}
+
+.homework-menu a{
+    display: block;
+    height: 42px;
+    line-height: 42px;
+    color: white;
+}
+
+
+
