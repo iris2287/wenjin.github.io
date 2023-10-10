@@ -36,10 +36,10 @@
         };
 
         document.getElementById("next").onclick = function(){
-            if(i == mp4files.length){
-                i = -1;
-            }
             i++;
+            if(i == mp4files.length){
+                i = 0;
+            }
             myvideos.src = "../myvideo/" + mp4files[i];
             myvideos.play();
         };
