@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    <style>
+        .button{
+            font-size: 20px;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <video id = "myvideo"></video>
+    
+    <div id="option">
+        <button id="play">play</button>
+        <button id="pause">pause</button>
+        <button id="next">next</button>
+    </div>
+
+    <script>
+        var mp4files=["funDogs.mp4","playdog.mp4","cattle.mp4"]
+        var myvideos = document.getElementById("myvideo");
+        var i = 0;
+        myvideos.src = "../myvideo/" + mp4files[0];
+
+        document.getElementById("play").onclick = function(){
+            myvideos.play();
+        };
+
+        document.getElementById("pause").onclick = function(){
+            myvideos.pause();
+        };
+
+        document.getElementById("next").onclick = function(){
+            if(i == mp4files.length){
+                i = -1;
+            }
+            i++;
+            myvideos.src = "../myvideo/" + mp4files[i];
+            myvideos.play();
+        };
+
+    </script>
+
+
+</body>
+</html>
