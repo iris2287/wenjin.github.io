@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>document</title>
     <style>
-        .button{
+        .button,input{
             font-size: 20px;
             margin-right: 20px;
+            width: 40px;
         }
     </style>
 </head>
@@ -19,6 +20,7 @@
         <button id="play">play</button>
         <button id="pause">pause</button>
         <button id="next">next</button>
+        Tm:<input type="text" value="0" id="currentTime">
     </div>
 
     <script>
@@ -28,6 +30,12 @@
         myvideos.src = "../myvideo/" + mp4files[0];
 
         document.getElementById("play").onclick = function(){
+            if(!parseInt(currentTimeDom.value)){
+                currentTimeDom.value = 0;
+                console.log("非法输入");
+            }
+            
+            myvideos.currentTime = currentTimeDom.value;
             myvideos.play();
         };
 
@@ -44,6 +52,11 @@
             myvideos.play();
         };
 
+        //控制当前时间
+        var currentTimeDom = document.getElementById("currentTime");
+        currentTimeDom.value = 5;
+
+        var duration = myvideos.duration;
     </script>
 
 
