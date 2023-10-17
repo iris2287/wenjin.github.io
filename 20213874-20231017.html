@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    <style>
+        .button,input{
+            font-size: 20px;
+            margin-right: 20px;
+            width: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <video id = "myvideo"></video>
+    
+    <div id="option">
+        <button id="play">play</button>
+        <button id="pause">pause</button>
+        <button id="next">next</button>
+        Tm:<input type="text" value="0" id="currentTime">
+    </div>
+
+    <script>
+        var mp4files=["funDogs.mp4","playdog.mp4","cattle.mp4"];
+        var myvideos = document.getElementById("myvideo");
+        var duration = document.getElementById("duration");
+        var i = 0;
+        myvideos.src = "../myvideo/" + mp4files[0];
+
+        document.getElementById("play").onclick = function(){
+            if(!parseInt(currentTimeDom.value)){
+                currentTimeDom.value = 0;
+                console.log("非法输入");
+            }
+
+            if(currentTimeDom.value > myvideos.duration){
+                currentTimeDom.value = duration;
+            }
+
+            myvideos.currentTime = currentTimeDom.value;
+            myvideos.play();
+        };
+
+        document.getElementById("pause").onclick = function(){
+            myvideos.pause();
+        };
+
+        document.getElementById("next").onclick = function(){
+            i++;
+            if(i == mp4files.length){
+                i = 0;
+            }
+            myvideos.src = "../myvideo/" + mp4files[i];
+            myvideos.play();
+        };
+
+        //控制当前时间
+        var currentTimeDom = document.getElementById("currentTime");
+        currentTimeDom.value = 5;
+
+
+    </script>
+
+</body>
+</html>
