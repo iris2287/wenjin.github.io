@@ -43,8 +43,8 @@
         var myvideos = document.getElementById("myvideo");
         var duration = document.getElementById("duration");
         var i = 0;
-        //myvideos.src = "../myvideo/" + mp4files[0];
-        myvideos.src = mp4files[0];
+        myvideos.src = "../myvideo/" + mp4files[0];
+       
 
         //全屏设置
         var browserWidth = document.body.clientWidth;
@@ -73,8 +73,7 @@
             if(i == mp4files.length){
                 i = 0;
             }
-            //myvideos.src = "../myvideo/" + mp4files[i];
-            myvideos.src = mp4files[i];
+            myvideos.src = "../myvideo/" + mp4files[i];
             myvideos.play();
 
             logoDom.textContent = 'NO.' + (i + 1) + '/' + '共' + mp4files.length;
