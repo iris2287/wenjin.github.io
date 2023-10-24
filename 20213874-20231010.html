@@ -26,7 +26,8 @@
         var mp4files=["funDogs.mp4","playdog.mp4","cattle.mp4"];
         var myvideos = document.getElementById("myvideo");
         var i = 0;
-        myvideos.src = "../myvideo/" + mp4files[0];
+        //myvideos.src = "../myvideo/" + mp4files[0];
+        myvideos.src = "myvideo/" + mp4files[0];
 
         document.getElementById("play").onclick = function(){
             myvideos.play();
@@ -41,7 +42,8 @@
             if(i == mp4files.length){
                 i = 0;
             }
-            myvideos.src = "../myvideo/" + mp4files[i];
+            //myvideos.src = "../myvideo/" + mp4files[i];
+            myvideos.src = "myvideo/" + mp4files[0];
             myvideos.play();
         };
 
