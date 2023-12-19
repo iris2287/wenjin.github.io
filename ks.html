@@ -7,9 +7,30 @@
 	<title>学习系统</title>
 
 	<style type="text/css">
+
 		body {
 			background-color: #faf3b6;
 			background-repeat: no-repeat;
+		}
+
+		.nav{
+			height: 200px;
+		}
+
+		.nav img{
+           width: 60px;
+           margin-left: 170px;
+		   padding: 5px;
+           margin-top: 0px;
+           border-radius: 40px;
+        }
+
+		.team{
+			font-family: 黑体;
+			color: #d67f0e;
+			margin-left: 450px;
+			font-size: 20px;
+			top: 200px;
 		}
 
 		div.border {
@@ -17,7 +38,7 @@
 			height: 600px;
 			border: 5px solid #eea444;
 			position: absolute;
-			top: 110px;
+			top: 250px;
 			left: 250px;
 			box-shadow: 6px 8px 6px 6px rgba(0, 0, 0, 0.5);
 			border-radius: 10px;
@@ -29,7 +50,6 @@
 			left: 360px;
 			height: 250px;
 			width: 400px;
-
 		}
 
 		input.play {
@@ -104,7 +124,7 @@
 			border-radius: 30px;
 			text-align: center;
 			position: absolute;
-			top: -710px;
+			top: -720px;
 			left: -200px;
 			background-color: #f08f3b;
 		}
@@ -117,13 +137,13 @@
 			text-align: center;
 			background-color: #f08f3b;
 			position: absolute;
-			top: -710px;
+			top: -720px;
 			left: 600px;
 		}
 
 		div.down {
 			position: absolute;
-			top: 750px;
+			top: 910px;
 			left: 100px;
 			height: 80px;
 			width: 900px;
@@ -140,14 +160,16 @@
 			position: absolute;
 			font-size: 10px;
 			left: 500px;
-			height: 150px;
+			height: 100px;
+			top: 150px;
 		}
 
 		div.h2 {
 			position: absolute;
 			font-size: 10px;
 			left: 800px;
-			height: 150px;
+			height: 100px;
+			top: 150px;
 		}
 
 		video#video {
@@ -184,16 +206,28 @@
 </head>
 <script src="ks.js"></script>
 <body>
+	<div class="nav">
+		<img src="./images/myFace.jpg">
+		<img src="./images/nyxPhoto.png">
+		<img src="./images/lgsPhoto.png">
+		<img src="./images/pljPhoto.png">
+		<img src="./images/teacher.jpg">
+		<p class="team">小组成员：颜廖文瑾,聂雨欣,梁港莎,彭丽娟&nbsp;&nbsp;&nbsp;&nbsp;指导老师：李健宏</p>
+	</div>
+
 	<div class="h1">
 		<h1>学习</h1>
 	</div>
+
 	<div class="h2">
 		<h1>系统</h1>
 	</div>
+
 	<div class="border" id="stage">
 		<video id="video"></video>
 		<audio id="audio"></audio>
 	</div>
+
 	<div class="down">
 		<div class="buttons" id="UI">
 			<div class="num1" id="currentTime"></div>
@@ -205,6 +239,7 @@
 			<div class="num2" id="logo"></div>
 		</div>
 	</div>
+
 </body>
 
 <script>
